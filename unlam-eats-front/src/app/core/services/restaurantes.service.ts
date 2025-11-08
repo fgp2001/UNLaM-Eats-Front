@@ -18,4 +18,12 @@ export class RestaurantesService {
   getAll() {
     return this.http.get<Restaurant[]>(`${this.base}/`);
   }
+
+  getById(id: number) {
+    return this.http.get<Restaurant>(`${this.base}/${id}`);
+  }
+
+  getMenu(id: number) {
+    return this.http.get<any[]>(`${this.base}/${id}/menu`);
+  }
 }

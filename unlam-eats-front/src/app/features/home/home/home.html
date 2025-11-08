@@ -36,7 +36,7 @@
           <strong>{{ r.name }}</strong>
           <small class="text-muted">{{ r.address }}</small>
         </div>
-        <a routerLink="/login" class="btn btn-primary">Iniciar pedido</a>
+        <a [routerLink]="['/restaurantes', r.id]" class="btn btn-primary">Iniciar pedido</a>
       </article>
     </div>
   </div>

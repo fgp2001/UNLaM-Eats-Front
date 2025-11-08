@@ -30,6 +30,14 @@ export const routes: Routes = [
     canActivate: [authGuard, deliveryGuard],
     loadComponent: () => import('./features/delivery/dashboard/dashboard').then(m => m.Dashboard)
   },
+  {
+    path: 'restaurantes/:id',
+    loadComponent: () => import('./features/restaurantes/detail/detail').then(m => m.RestauranteDetailComponent)
+  },
+  {
+    path: 'checkout',
+    loadComponent: () => import('./features/checkout/checkout').then(m => m.CheckoutComponent)
+  },
   { path: '**', redirectTo: '' }
 ];
 
